@@ -49,7 +49,6 @@ When you first launch GGTorrents:
 
 ## Managing Torrents
 
-- **Pause/Resume**: Click the pause or play button
 - **Remove**: Click the trash icon
 - **View Details**: Click on any torrent to see files and statistics
 - **Open Folder**: Click the folder icon to open the download location

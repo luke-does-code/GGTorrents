@@ -8,7 +8,7 @@ A modern, fully-featured BitTorrent client for Ubuntu Desktop with a beautiful u
 
 - **Full BitTorrent Support**: Download and seed torrents using the WebTorrent protocol
 - **Modern UI**: Beautiful, responsive interface built with React and Tailwind CSS
-- **Torrent Management**: Add, pause, resume, and remove torrents with ease
+- **Torrent Management**: Add and remove torrents with ease
 - **File Selection**: Choose which files to download from multi-file torrents
 - **Statistics Dashboard**: Monitor your download/upload speeds and overall stats
 - **Customizable Settings**: Configure download location, bandwidth limits, and more
@@ -78,7 +78,6 @@ The packages will be available in the `release` directory.
 
 ### Managing Torrents
 
-- **Pause/Resume**: Click the pause/play button on any torrent
 - **Remove**: Click the trash icon to remove a torrent (choose whether to delete files)
 - **View Details**: Click on a torrent to see detailed information and file list
 - **Open Location**: Click the folder icon to open the download location
