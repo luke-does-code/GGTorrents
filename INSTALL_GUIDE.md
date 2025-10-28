@@ -6,6 +6,7 @@ Before installing, make sure you have:
 - Ubuntu 20.04 or later
 - Terminal access
 - Internet connection
+- FUSE library (for AppImage): `sudo apt-get install libfuse2`
 
 ## Installation Steps
 
@@ -84,6 +85,12 @@ chmod +x install.sh uninstall.sh ggtorrents
 # Install npm
 sudo apt-get update
 sudo apt-get install -y npm
+```
+
+### "error loading libfuse.so.2" (AppImage)
+```bash
+# Install FUSE library
+sudo apt-get install libfuse2
 ```
 
 ### Build Errors

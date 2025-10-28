@@ -21,6 +21,7 @@ A modern, fully-featured BitTorrent client for Ubuntu Desktop with a beautiful u
 
 - Ubuntu 20.04 or later
 - Node.js 18+ (will be installed automatically if not present)
+- FUSE library (required for AppImage): `sudo apt-get install libfuse2`
 
 ### Quick Install
 
@@ -67,6 +68,25 @@ npm run package
 ```
 
 The packages will be available in the `release` directory.
+
+### Using Pre-built Packages
+
+Download from the [Releases](https://github.com/luke-does-code/GGTorrents/releases) page:
+
+**AppImage (Portable):**
+```bash
+# Install FUSE if needed
+sudo apt-get install libfuse2
+
+# Make executable and run
+chmod +x GGTorrents-*.AppImage
+./GGTorrents-*.AppImage
+```
+
+**Debian Package:**
+```bash
+sudo dpkg -i ggtorrents_*_amd64.deb
+```
 
 ## Usage
 
