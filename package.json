@@ -55,6 +55,9 @@
       "target": ["AppImage", "deb"],
       "category": "Network",
       "icon": "assets/icon.png"
+    },
+    "appImage": {
+      "executableArgs": ["--no-sandbox"]
     }
   }
 }

@@ -10,6 +10,11 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const isDev = process.env.NODE_ENV === 'development'
 
+// Disable GPU sandbox for AppImage compatibility
+process.env.ELECTRON_DISABLE_SANDBOX = '1'
+app.commandLine.appendSwitch('no-sandbox')
+app.commandLine.appendSwitch('disable-setuid-sandbox')
+
 interface Settings {
   downloadPath: string
   uploadLimit: number
@@ -88,6 +93,7 @@ class TorrentApp {
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
+        sandbox: false,
         preload: path.join(__dirname, 'preload.js'),
       },
       icon: path.join(__dirname, '../../assets/icon.png'),
