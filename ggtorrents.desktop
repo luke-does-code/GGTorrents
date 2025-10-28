@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GGTorrents
+Comment=High-performance BitTorrent client
+Exec=INSTALL_PATH/ggtorrents
+Icon=INSTALL_PATH/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Network;FileTransfer;P2P;
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;
+Keywords=torrent;p2p;download;bittorrent;
+StartupNotify=true

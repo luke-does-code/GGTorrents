@@ -1,0 +1,60 @@
+{
+  "name": "ggtorrents",
+  "version": "1.0.0",
+  "description": "A fully-featured torrent client for Ubuntu",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "npm run build && electron . --no-sandbox",
+    "dev": "concurrently \"npm run watch:main\" \"npm run watch:renderer\" \"npm run electron:dev\"",
+    "electron:dev": "wait-on http://localhost:5173 && electron . --no-sandbox",
+    "build": "npm run build:main && npm run build:preload && npm run build:renderer",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:preload": "tsc -p tsconfig.preload.json",
+    "build:renderer": "vite build",
+    "watch:main": "tsc -p tsconfig.main.json --watch",
+    "watch:renderer": "vite",
+    "package": "electron-builder --linux"
+  },
+  "keywords": ["torrent", "bittorrent", "p2p"],
+  "author": "GGTorrents",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/webtorrent": "^0.109.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webtorrent": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.ggtorrents.app",
+    "productName": "GGTorrents",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Network",
+      "icon": "assets/icon.png"
+    }
+  }
+}
